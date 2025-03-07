@@ -1,0 +1,73 @@
+{
+    "welcome": "अस्पताल नेटवर्क में आपका स्वागत है",
+    "dashboard": "डैशबोर्ड",
+    "dashboardPage": {
+      "title": "डैशबोर्ड",
+      "getStarted":"शुरू करें",
+      "welcomeMessage": "आपके डैशबोर्ड में स्वागत है",
+      "sidebar": {
+        "home": "होम",
+        "appointments": "नियुक्तियाँ",
+        "patients": "मरीज",
+        "doctors": "डॉक्टर",
+        "profile": "प्रोफ़ाइल",
+        "settings": "सेटिंग्स",
+        "logout": "लॉगआउट",
+        "medicines":"दवाई"
+      },
+      "content": {
+        "overview": "सिंहावलोकन",
+        "totalAppointments": "कुल नियुक्तियाँ",
+        "totalPatients": "कुल मरीज",
+        "availableDoctors": "उपलब्ध डॉक्टर",
+        "upcomingAppointments": "आगामी नियुक्तियाँ",
+        "viewAll": "सभी देखें"
+      }
+    },
+    "login": "लॉगिन",
+    "loginPage": {
+      "title": "लॉग इन करें",
+      "email": "ईमेल",
+      "password": "पासवर्ड",
+      "enterEmail": "अपना ईमेल दर्ज करें",
+      "enterPassword": "अपना पासवर्ड दर्ज करें",
+      "rememberMe": "मुझे याद रखें",
+      "forgotPassword": "पासवर्ड भूल गए?",
+      "button": "लॉगिन",
+      "noAccount": "क्या आपका खाता नहीं है?",
+      "signup": "साइन अप करें"
+    },
+    "signup": "साइन अप",
+    "signupPage": {
+      "title": "साइन अप करें",
+      "name": "पूरा नाम",
+      "email": "ईमेल",
+      "password": "पासवर्ड",
+      "confirmPassword": "पासवर्ड की पुष्टि करें",
+      "enterName": "अपना पूरा नाम दर्ज करें",
+      "enterEmail": "अपना ईमेल दर्ज करें",
+      "enterPassword": "अपना पासवर्ड दर्ज करें",
+      "enterConfirmPassword": "अपना पासवर्ड पुष्टि करें",
+      "role": "भूमिका",
+      "selectRole": "अपनी भूमिका चुनें",
+      "patient": "मरीज",
+      "doctor": "डॉक्टर",
+      "admin": "प्रशासक",
+      "button": "साइन अप करें",
+      "alreadyAccount": "पहले से ही खाता है?",
+      "login": "लॉगिन करें"
+    },
+    "increase": "बढ़ाएँ",
+    "decrease": "कम करें",
+    "error": {
+      "fillAllFields": "कृपया सभी फ़ील्ड भरें",
+      "emailRequired": "ईमेल आवश्यक है",
+      "passwordRequired": "पासवर्ड आवश्यक है",
+      "invalidCredentials": "अमान्य ईमेल या पासवर्ड"
+    },
+    "success": {
+      "login": "लॉगिन सफल",
+      "signup": "साइनअप सफल"
+    }
+  }
+  

@@ -1,0 +1,73 @@
+{
+    "welcome": "Welcome to Hospital Network",
+    "dashboard": "Dashboard",
+    "dashboardPage": {
+      "title": "Dashboard",
+      "getStarted":"Get Started",
+      "welcomeMessage": "Welcome to your dashboard",
+      "sidebar": {
+        "home": "Home",
+        "appointments": "Appointments",
+        "patients": "Patients",
+        "doctors": "Doctors",
+        "profile": "Profile",
+        "settings": "Settings",
+        "logout": "Logout",
+         "medicines":"Medicines"
+      },
+      "content": {
+        "overview": "Overview",
+        "totalAppointments": "Total Appointments",
+        "totalPatients": "Total Patients",
+        "availableDoctors": "Available Doctors",
+        "upcomingAppointments": "Upcoming Appointments",
+        "viewAll": "View All"
+      }
+    },
+    "login": "Login",
+    "loginPage": {
+      "title": "Log in",
+      "email": "Email",
+      "password": "Password",
+      "enterEmail": "Enter your email",
+      "enterPassword": "Enter your password",
+      "rememberMe": "Remember Me",
+      "forgotPassword": "Forgot Password?",
+      "button": "Login",
+      "noAccount": "Don’t have an account?",
+      "signup": "Sign Up"
+    },
+    "signup": "Sign Up",
+    "signupPage": {
+      "title": "Sign Up",
+      "name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "enterName": "Enter your full name",
+      "enterEmail": "Enter your email",
+      "enterPassword": "Enter your password",
+      "enterConfirmPassword": "Confirm your password",
+      "role": "Role",
+      "selectRole": "Select your role",
+      "patient": "patient",
+      "doctor": "Doctor",
+      "admin": "Admin",
+      "button": "Sign Up",
+      "alreadyAccount": "Already have an account?",
+      "login": "Login"
+    },
+    "increase": "Increase",
+    "decrease": "Decrease",
+    "error": {
+      "fillAllFields": "Please fill in all fields",
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required",
+      "invalidCredentials": "Invalid email or password"
+    },
+    "success": {
+      "login": "Login Successful",
+      "signup": "Signup Successful"
+    }
+  }
+  
