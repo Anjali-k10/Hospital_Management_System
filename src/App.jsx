@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom"; // Import useLocation
+import { Routes, Route, Navigate } from "react-router-dom"; // ❌ Don't import BrowserRouter here
 import { ThemeProvider } from "./context/ThemeContext";
-import { useAuth } from "./context/AuthContext"; 
+import { useAuth } from "./context/AuthContext"; // Import Auth Context
 import { I18nextProvider } from "react-i18next";
-import i18n from "./i18n";
-
+import i18n from "./i18n"; // Import i18n instance
+import RoleSidebar from "./Components/RoleSidebar";
+import RoleMainContent from "./Components/RoleMainContent";
 import Navbar from "./Components/Navbar";
-import Dashboard from "./Components/Dashboard";
+import Dashboard from "./Components/Dashboard"; // Import common dashboard
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import PatientDashboard from "./Components/PatientDashboard";
@@ -15,10 +16,10 @@ import AdminDashboard from "./Components/AdminDashboard";
 import CommonDashboard from "./Components/CommonDashboard";
 
 function App() {
-  const { user } = useAuth();
+  const { user } = useAuth(); // Get logged-in user details
   const [storedUser, setStoredUser] = useState(null);
-  const location = useLocation(); // Get the current route
 
+  // Retrieve user from localStorage on app load
   useEffect(() => {
     const savedUser = localStorage.getItem("user");
     if (savedUser) {
@@ -26,6 +27,7 @@ function App() {
     }
   }, []);
 
+  // Persist theme from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -33,40 +35,30 @@ function App() {
     }
   }, []);
 
-  // ✅ Define pages where Navbar should NOT be displayed
-  const noNavbarRoutes = ["/patient-dashboard", "/doctor-dashboard", "/admin-dashboard"];
-
   return (
     <I18nextProvider i18n={i18n}>
       <ThemeProvider>
         <div className="min-h-screen transition-colors duration-300 bg-white dark:bg-gray-900 text-black dark:text-white">
-          {/* ✅ Only show Navbar on pages that are NOT in noNavbarRoutes */}
-          {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
-
+          <Navbar />
           <Routes>
+            {/* Default route should show the common dashboard */}
             <Route path="/" element={<Dashboard />} />
 
             {/* Role-based Dashboard Routing */}
             <Route
-              path="/dashboard"
-              element={
-                (user || storedUser) ? (
-                  (user?.role || storedUser?.role) === "patient" ? <PatientDashboard /> :
-                  (user?.role || storedUser?.role) === "doctor" ? <DoctorDashboard /> :
-                  (user?.role || storedUser?.role) === "admin" ? <AdminDashboard /> :
-                  <Navigate to="/" />
-                ) : (
-                  <Navigate to="/login" />
-                )
-              }
-            />
+          path="/dashboard/*"
+          element={
+            <div className="flex w-screen h-screen">
+              <RoleSidebar />
+              <RoleMainContent />
+            </div>
+          }
+        />
 
             {/* Authentication Routes */}
             <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
             <Route path="/commondashboard" element={<CommonDashboard />} />
-
-            {/* Direct dashboard routes */}
+            <Route path="/signup" element={<Signup />} />
             <Route path="/patient-dashboard" element={<PatientDashboard />} />
             <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />

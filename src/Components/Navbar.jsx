@@ -38,7 +38,7 @@ const Navbar = () => {
 
       {/* Middle Section: Navigation */}
       <div className="flex items-center space-x-4">
-        {!user && <Link to="/commondashboard" className="px-4 hover:underline">{t("dashboard")}</Link>}
+        <Link to="/dashboard" className="px-4 hover:underline">{t("dashboard")}</Link>
         {!user ? (
           <>
             <Link to="/login" className="px-4 hover:underline">{t("login")}</Link>
@@ -144,4 +144,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
